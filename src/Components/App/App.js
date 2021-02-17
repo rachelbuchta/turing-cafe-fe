@@ -19,15 +19,10 @@ class App extends Component {
   getData = () => {
     let allReservations
     getReservations()
-      .then(response => {
-        return response.json()
-      })
+      .then(response => response.json())
       .then(reservations => {
         allReservations = reservations.map(reservation => reservation)
-        this.setState({
-          reservations: allReservations
-      })
-      console.log(this.state.reservations)
+        this.setState({reservations: allReservations})
       })
       .catch(error => {
         console.log('Reservations Request Failed', error)
