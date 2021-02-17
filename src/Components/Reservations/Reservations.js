@@ -20,10 +20,9 @@ const reservationCard = reservations.map(res => {
 
 
   return (
-    <>
-    <h1>Reservations</h1>
-    {reservationCard}
-    </>
+    <section className='cardsContainer'>
+      {reservationCard}
+    </section>
   )
 }
 
