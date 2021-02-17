@@ -1,5 +1,20 @@
 .resCard {
-  width: 90%;
-  border: 2px black solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  border: 4px teal solid;
   background-color: azure;
+  height: 80%;
+  color: teal;
+  /* padding: 1% */
+}
+
+.cancelButton {
+  align-self: center;
+  background-color: teal;
+  color: azure;
+  width: 80%;
+  margin: 2%;
+  height: 20%;
 }
