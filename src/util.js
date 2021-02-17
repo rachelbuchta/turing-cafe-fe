@@ -19,3 +19,21 @@ export const updateData = (id, name, time, date, number) => {
       }
     })
 }
+
+export const deleteData = (id) => {
+  return fetch(`http://localhost:3001/api/v1/reservations/${id}`, {
+    method: 'DELETE',
+    headers: {
+      'Content-type': 'application/json',
+      'Accept': 'application/json'
+    },
+    body: JSON.stringify({ id: id })
+  })
+    .then(response => {
+      if (response.ok) {
+        return response
+      } else {
+        throw new Error('We apologize, we are having issues loading this page...Please try again later!')
+      }
+    })
+}

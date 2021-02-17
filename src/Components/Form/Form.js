@@ -27,8 +27,6 @@ class Form extends Component {
     this.props.addReservation(newReservation)
   }
 
-
-
   render() {
     return (
       <form>
@@ -40,14 +38,16 @@ class Form extends Component {
           onChange={this.handleChange}
         />
         <input
-          type='date'
+          type='text'
           name='date'
+          placeholder='Date (mm/dd)'
           value={this.state.date}
           onChange={this.handleChange}
         />
         <input
-          type='time'
+          type='text'
           name='time'
+          placeholder='Time'
           value={this.state.time}
           onChange={this.handleChange}
         />

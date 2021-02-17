@@ -2,7 +2,7 @@ import React from 'react'
 import './Reservations.css'
 import ReservationCard from '../ReservationCard/ReservationCard'
 
-const Reservations = ({reservations}) => {
+const Reservations = ({reservations, cancelReservation}) => {
 console.log(reservations)
 const reservationCard = reservations.map(res => {
   return (
@@ -13,11 +13,10 @@ const reservationCard = reservations.map(res => {
     date={res.date}
     time={res.time}
     number={res.number}
+    cancelReservation={cancelReservation}
   />
   )
 })
-
-
 
   return (
     <section className='cardsContainer'>
